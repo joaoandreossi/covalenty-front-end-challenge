@@ -16,12 +16,12 @@ const ProductList = () => {
 
     const renderProducts = () => {
         return data.map((product) => (
-            <li>
+            <li key={product.id}>
                 <ProductCard 
                     id={product.id} 
                     title={product.title} 
                     price={product.price}
-                    imageUrl={product.images[0] ?? ""}
+                    imageUrl={product.images[0] ?? null}
                 />
             </li>
         ))
