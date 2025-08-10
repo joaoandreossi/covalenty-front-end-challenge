@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^19.1.7",
     "autoprefixer": "^10.4.21",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
