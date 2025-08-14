@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client"
 
 import store from "./store/store"
 import { Provider } from "react-redux"
+import { HashRouter } from "react-router"
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
@@ -20,7 +21,9 @@ const init = () => {
         <StrictMode>
             <Provider store={store}>
                 <QueryClientProvider client={queryClient}>
-                    <App />
+                    <HashRouter>
+                        <App />
+                    </HashRouter>                   
                 </QueryClientProvider>
             </Provider>
         </StrictMode>
